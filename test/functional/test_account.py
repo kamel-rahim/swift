@@ -704,6 +704,7 @@ class TestAccount(unittest2.TestCase):
             resp = retry(post, headers={'X-Account-Access-Control': '{}'})
             resp.read()
 
+    @unittest.skip('OIO skip')
     def test_unicode_metadata(self):
         if tf.skip:
             raise SkipTest

@@ -133,6 +133,7 @@ class TestContainer(unittest2.TestCase):
         self.assertEqual(resp.getheader('x-container-meta-one'), '1')
         self.assertEqual(resp.getheader('x-container-meta-two'), '2')
 
+    @unittest.skip('OIO skip')
     def test_unicode_metadata(self):
         if tf.skip:
             raise SkipTest
@@ -272,6 +273,7 @@ class TestContainer(unittest2.TestCase):
         self.assertIn(resp.status, (200, 204))
         self.assertEqual(resp.getheader('x-container-meta-test'), 'Value')
 
+    @unittest.skip('OIO skip')
     def test_PUT_bad_metadata(self):
         if tf.skip:
             raise SkipTest
@@ -377,6 +379,7 @@ class TestContainer(unittest2.TestCase):
         resp.read()
         self.assertEqual(resp.status, 404)
 
+    @unittest.skip('OIO skip')
     def test_POST_bad_metadata(self):
         if tf.skip:
             raise SkipTest
@@ -411,6 +414,7 @@ class TestContainer(unittest2.TestCase):
         resp.read()
         self.assertEqual(resp.status, 400)
 
+    @unittest.skip('OIO skip')
     def test_POST_bad_metadata2(self):
         if tf.skip:
             raise SkipTest
@@ -434,6 +438,7 @@ class TestContainer(unittest2.TestCase):
         resp.read()
         self.assertEqual(resp.status, 400)
 
+    @unittest.skip('OIO skip')
     def test_POST_bad_metadata3(self):
         if tf.skip:
             raise SkipTest

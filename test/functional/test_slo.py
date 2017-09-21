@@ -303,6 +303,7 @@ class TestSlo(Base):
         self.assertEqual('d', file_contents[-2])
         self.assertEqual('e', file_contents[-1])
 
+    @unittest.skip('OIO skip')
     def test_slo_get_ranged_manifest(self):
         file_item = self.env.container.file('ranged-manifest')
         grouped_file_contents = [
@@ -326,6 +327,7 @@ class TestSlo(Base):
             [('a', 2097152), ('b', 1048576)],
             grouped_file_contents)
 
+    @unittest.skip('OIO skip')
     def test_slo_get_ranged_submanifest(self):
         file_item = self.env.container.file('ranged-submanifest')
         grouped_file_contents = [
