@@ -705,6 +705,7 @@ class TestAccount(unittest2.TestCase):
             resp.read()
 
     def test_unicode_metadata(self):
+        self.fail("OIO early fail")
         if tf.skip:
             raise SkipTest
 

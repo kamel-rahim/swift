@@ -304,6 +304,7 @@ class TestSlo(Base):
         self.assertEqual('e', file_contents[-1])
 
     def test_slo_get_ranged_manifest(self):
+        self.fail("OIO early fail")
         file_item = self.env.container.file('ranged-manifest')
         grouped_file_contents = [
             (char, sum(1 for _char in grp))
@@ -318,6 +319,7 @@ class TestSlo(Base):
             ('d', 1)], grouped_file_contents)
 
     def test_slo_get_ranged_manifest_repeated_segment(self):
+        self.fail("OIO early fail")
         file_item = self.env.container.file('ranged-manifest-repeated-segment')
         grouped_file_contents = [
             (char, sum(1 for _char in grp))
@@ -327,6 +329,7 @@ class TestSlo(Base):
             grouped_file_contents)
 
     def test_slo_get_ranged_submanifest(self):
+        self.fail("OIO early fail")
         file_item = self.env.container.file('ranged-submanifest')
         grouped_file_contents = [
             (char, sum(1 for _char in grp))
